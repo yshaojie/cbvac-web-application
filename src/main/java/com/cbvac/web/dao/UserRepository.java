@@ -1,6 +1,6 @@
-package com.luo.web.luowebapplication.dao;
+package com.cbvac.web.dao;
 
-import com.luo.web.luowebapplication.bean.User;
+import com.cbvac.web.bean.User;
 import org.springframework.data.repository.CrudRepository;
 
 /**

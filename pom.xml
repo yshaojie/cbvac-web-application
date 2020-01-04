@@ -8,10 +8,10 @@
 		<version>2.1.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.luo.web</groupId>
-	<artifactId>luo-web-application</artifactId>
+	<groupId>com.cbvac.web</groupId>
+	<artifactId>cbvac-web-application</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>luo-web-application</name>
+	<name>cbvac-web-application</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

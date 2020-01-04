@@ -1,4 +1,4 @@
-package com.luo.web.luowebapplication.bean;
+package com.cbvac.web.bean;
 
 import lombok.Data;
 

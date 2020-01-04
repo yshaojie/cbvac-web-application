@@ -1,13 +1,13 @@
-package com.luo.web.luowebapplication;
+package com.cbvac.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LuoWebApplication {
+public class CbvacWebApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LuoWebApplication.class, args);
+		SpringApplication.run(CbvacWebApplication.class, args);
 	}
 
 }

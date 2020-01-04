@@ -1,7 +1,7 @@
-package com.luo.web.luowebapplication.service;
+package com.cbvac.web.service;
 
-import com.luo.web.luowebapplication.bean.User;
-import com.luo.web.luowebapplication.dao.UserRepository;
+import com.cbvac.web.bean.User;
+import com.cbvac.web.dao.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

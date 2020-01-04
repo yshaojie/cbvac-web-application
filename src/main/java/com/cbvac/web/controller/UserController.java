@@ -1,6 +1,6 @@
-package com.luo.web.luowebapplication.controller;
+package com.cbvac.web.controller;
 
-import com.luo.web.luowebapplication.service.UserService;
+import com.cbvac.web.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;

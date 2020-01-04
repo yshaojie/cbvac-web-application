@@ -4,7 +4,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -27,26 +26,30 @@ public class CbvacWebApplication {
 
 	@Bean
 	@Primary
-	@ConfigurationProperties(prefix="spring.masterdatasource")
 	public DataSource masterDatasource() {
 		return masterDataSourceProperties().initializeDataSourceBuilder().build();
 	}
 
 	@Bean
-	@ConfigurationProperties(prefix="spring.slavedatasource")
-	public DataSource slaveDatasource() {
-		return DataSourceBuilder.create().build();
-	}
-
-	@Bean
-	public JdbcTemplate masterJdbcTemplate(DataSource masterDatasource){
-		System.out.println(masterDatasource);
-		System.out.println(masterDatasource());
+	public JdbcTemplate masterJdbcTemplate(){
 		return new JdbcTemplate(masterDatasource());
 	}
 
 	@Bean
-	public JdbcTemplate slaveJdbcTemplate(DataSource masterDatasource){
-		return new JdbcTemplate(masterDatasource);
+	@ConfigurationProperties("spring.slavedatasource")
+	public DataSourceProperties slaveDataSourceProperties() {
+		return new DataSourceProperties();
+	}
+
+	@Bean
+	public DataSource slaveDatasource() {
+		return slaveDataSourceProperties().initializeDataSourceBuilder().build();
+	}
+
+
+
+	@Bean
+	public JdbcTemplate slaveJdbcTemplate(){
+		return new JdbcTemplate(slaveDatasource());
 	}
 }

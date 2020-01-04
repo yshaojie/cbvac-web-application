@@ -22,12 +22,17 @@ public class UserDao {
     @Autowired
     private JdbcTemplate masterJdbcTemplate;
 
+    @Autowired
+    private JdbcTemplate slaveJdbcTemplate;
+
     public User findById(long id) {
         String sql = "select * from user where id=?";
         Object[] params = {
               id
         };
         final List<User> users = masterJdbcTemplate.query(sql, params, new UserRowMapper());
+        final List<User> users1 = slaveJdbcTemplate.query(sql, params, new UserRowMapper());
+        System.out.println(users1);
         if (CollectionUtils.isEmpty(users)) {
             return null;
         }

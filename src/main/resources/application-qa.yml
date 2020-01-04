@@ -1,14 +1,13 @@
 spring:
-  datasource:
+  masterdatasource:
     url: jdbc:mysql://106.12.201.12:3311/cbvac
     username: root
     password: fNty2u8awl
     platform: mysql
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    database-platform: org.hibernate.dialect.MySQLDialect
+  slavedatasource:
+    url: jdbc:mysql://106.12.201.12:3311/cbvac
+    username: root
+    password: fNty2u8awl
+    platform: mysql
 
 

@@ -1,8 +1,9 @@
 package com.cbvac.web.bean;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-
-import javax.persistence.*;
+import lombok.NoArgsConstructor;
 
 /**
  * @author shaojieyue
@@ -10,11 +11,10 @@ import javax.persistence.*;
  */
 
 @Data
-@Entity
-@Table(name = "user")
+@NoArgsConstructor(force = true)
+@AllArgsConstructor
+@Builder
 public class User {
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
 
     private String name;

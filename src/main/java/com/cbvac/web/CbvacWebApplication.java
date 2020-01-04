@@ -25,7 +25,6 @@ public class CbvacWebApplication {
 	}
 
 	@Bean
-	@Primary
 	public DataSource masterDatasource() {
 		return masterDataSourceProperties().initializeDataSourceBuilder().build();
 	}

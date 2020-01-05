@@ -51,7 +51,7 @@
 	</dependencies>
 	<repositories>
 		<repository>
-			<id>nexus-aliyun</id>
+			<id>central</id>
 			<name>Nexus aliyun</name>
 			<url>https://maven.aliyun.com/repository/public</url>
 		</repository>

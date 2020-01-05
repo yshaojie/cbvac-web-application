@@ -12,5 +12,3 @@ spring:
     platform: mysql
   application:
     name: CbvacWebApplication
-
-
